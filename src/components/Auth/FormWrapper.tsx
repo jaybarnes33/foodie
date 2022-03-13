@@ -13,11 +13,6 @@ const FormWrapper = ({ children }: { children: ReactNode }) => {
       <Container>
         <Row className={styles.formWrapper}>
           <Col md={6} className="desktop-only">
-            <Link href="/">
-              <Button className="m-4" variant="secondary">
-                Home
-              </Button>
-            </Link>
             <div className={styles.imgWrapper}>
               <img
                 src="/assets/formvector.svg"
@@ -29,7 +24,7 @@ const FormWrapper = ({ children }: { children: ReactNode }) => {
               </p>
             </div>
           </Col>
-          <Col md={6} className={styles.form}>
+          <Col sm={12} md={6} className={styles.form}>
             <div className="mb-4">
               <h1>{pathname === "/login" ? "Welcome Back" : "Get Started"}</h1>
               <p>

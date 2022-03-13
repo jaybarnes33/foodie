@@ -111,11 +111,16 @@
   place-items: center;
 
   @media screen and (max-width: 768px) {
+    min-height: 130vh;
     background-color: #1a1a1aae;
     color: white;
     background-blend-mode: overlay;
     background-image: url("/images/landing/home.jpg");
     background-size: cover;
     background-position: center;
+  }
+
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    min-height: 190vh;
   }
 }
