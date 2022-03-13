@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { Card, CardImg, Col, Container, Row } from "react-bootstrap";
 
@@ -27,14 +28,22 @@ const FeaturedFoods = () => {
 
         <Row>
           {featuredItems.map((item, key) => (
-            <Col xs={4} lg={3} key={`item-key`}>
+            <Col xs={4} lg={3} key={`item-key`} className="mt-2">
               <Card
                 style={{
                   border: "none",
                   boxShadow: "0 8.21687px 8.21687px rgba(0,0,0,.1)",
                 }}
               >
-                <CardImg src={`/images/landing/${item.image}`} />
+                <CardImg
+                  src={`/images/landing/${item.image}`}
+                  as={Image}
+                  width="100"
+                  height="120"
+                  quality={100}
+                  alt={item.name}
+                  priority
+                />
                 <Card.Body>
                   <small>
                     <h6>{item.name}</h6>
