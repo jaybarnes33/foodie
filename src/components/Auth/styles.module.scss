@@ -110,7 +110,7 @@
   display: flex;
   place-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     min-height: 130vh;
     background-color: #1a1a1aae;
     color: white;
