@@ -9,10 +9,10 @@ import Link from "next/link";
 const FormWrapper = ({ children }: { children: ReactNode }) => {
   const { pathname } = useRouter();
   return (
-    <>
-      <Container>
+    <div>
+      <>
         <Row className={styles.formWrapper}>
-          <Col md={6} className="desktop-only">
+          <Col md={6} className="desktop-only px-5">
             <div className={styles.imgWrapper}>
               <img
                 src="/assets/formvector.svg"
@@ -24,7 +24,7 @@ const FormWrapper = ({ children }: { children: ReactNode }) => {
               </p>
             </div>
           </Col>
-          <Col sm={12} md={6} className={styles.form}>
+          <Col sm={12} md={6} className={`px-5 ${styles.form}`}>
             <div className="mb-4">
               <h1>{pathname === "/login" ? "Welcome Back" : "Get Started"}</h1>
               <p>
@@ -77,8 +77,8 @@ const FormWrapper = ({ children }: { children: ReactNode }) => {
             </div>
           </Col>
         </Row>
-      </Container>
-    </>
+      </>
+    </div>
   );
 };
 

@@ -111,7 +111,7 @@
   place-items: center;
 
   @media screen and (max-width: 767px) {
-    min-height: 130vh;
+    min-height: 120vh;
     background-color: #1a1a1aae;
     color: white;
     background-blend-mode: overlay;
@@ -121,6 +121,10 @@
   }
 
   @media screen and (max-width: 768px) and (orientation: landscape) {
-    min-height: 190vh;
+    min-height: 120vh;
+  }
+
+  @media screen and (max-width: 690px) and (orientation: landscape) {
+    min-height: 170vh;
   }
 }
