@@ -2,8 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { Card, CardImg, Col, Container, Row } from "react-bootstrap";
 
-const FeaturedFoods = () => {
-  const featuredItems = [
+const Today = () => {
+  const today = [
     {
       name: "Hostel Crust",
       image: "home.jpg",
@@ -24,10 +24,10 @@ const FeaturedFoods = () => {
   return (
     <section className="py-5">
       <Container>
-        <h2 className="bold">Available Sellers</h2>
+        <h2 className="bold">Available Today</h2>
 
         <Row>
-          {featuredItems.map((item, key) => (
+          {today.reverse().map((item, key) => (
             <Col xs={3} lg={3} key={`item-key`} className="mt-2">
               <Card
                 style={{
@@ -60,4 +60,4 @@ const FeaturedFoods = () => {
   );
 };
 
-export default FeaturedFoods;
+export default Today;

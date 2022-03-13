@@ -10,6 +10,7 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import FeaturedFoods from "../components/Landing/FeaturedFoods";
+import Today from "../components/Landing/Today";
 
 import Banner from "../components/Layout/Banner";
 import styles from "../styles/Home.module.css";
@@ -55,9 +56,7 @@ export default function Home() {
           <Container>
             <div>
               <h1 className="primary bold">Why stay hungry?</h1>
-              <p className="text-secondary">
-                Order food and have it delivered straight to you.
-              </p>
+              <p>Order food and have it delivered straight to you.</p>
 
               <InputGroup>
                 <Form.Control placeholder="Search for food/restaurant" />
@@ -66,7 +65,11 @@ export default function Home() {
             </div>
           </Container>
         </Banner>
+        <Today />
         <FeaturedFoods />
+        <footer className="d-flex justify-content-center">
+          &copy; {new Date().getFullYear()} All rights reserved
+        </footer>
       </>
     </>
   );

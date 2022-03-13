@@ -13,13 +13,13 @@ a {
 }
 
 .navbar {
-  background-color: #1a1a1aee;
+  background-color: #353434ae;
 }
 
 .nav-link {
   font-family: "Noto Sans Display", sans-serif;
   color: white !important;
-  font-weight: 700;
+  font-weight: 500;
 }
 * {
   padding: 0;
@@ -29,6 +29,8 @@ a {
 }
 
 .primary {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
   font-family: "Noto Sans Display", sans-serif;
 }
 
@@ -37,4 +39,27 @@ button {
 }
 .bold {
   font-weight: 700;
+}
+
+input {
+  border: none !important;
+  border-bottom: 1px solid var(--bs-secondary) !important;
+}
+
+.btn,
+input {
+  border-radius: none !important;
+}
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+  .primary {
+    font-size: 2.4rem;
+  }
+  .card,
+  .card h6 {
+    font-size: 0.5rem;
+    background: none;
+  }
 }
