@@ -30,7 +30,7 @@ export default function Home() {
       </Head>
 
       <>
-        <Banner image="/images/landing/bg.jpg" height="100vh">
+        <Banner image="/images/landing/bg.jpg" height="60vh">
           <Container>
             <div>
               <h1 className="primary bold">Why stay hungry?</h1>

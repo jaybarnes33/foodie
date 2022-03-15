@@ -28,7 +28,7 @@ const FeaturedFoods = () => {
 
         <Row>
           {featuredItems.map((item, key) => (
-            <Col xs={3} lg={3} key={`item-key`} className="mt-2">
+            <Col sm={6} lg={3} key={`item-key`} className="mt-2">
               <Card
                 style={{
                   border: "none",
