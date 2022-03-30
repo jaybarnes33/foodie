@@ -1,7 +1,7 @@
 import React from "react";
 
 interface IBannerProps {
-  image: string;
+  image?: string;
   children: React.ReactNode;
   height: string;
 }
@@ -13,8 +13,8 @@ const Banner = ({ image, children, height }: IBannerProps) => {
         {`
           div {
             text-align: center;
-            color: var(--bs-light);
-            background-color: #1a1a1aaa;
+            color: white;
+            background-color: #0e0d0daa;
             background-blend-mode: overlay;
             background-image: url(${image});
             background-size: cover;

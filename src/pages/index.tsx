@@ -18,8 +18,8 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <>
-      <Header />
+    <div className="body">
+      <Header variant="dark" />
       <Head>
         <title>Hungry? Order food and have it delivered straight to you.</title>
         <meta
@@ -38,7 +38,7 @@ export default function Home() {
 
               <InputGroup>
                 <Form.Control placeholder="Search for food/restaurant" />
-                <Button variant="danger">Search</Button>
+                <Button variant="warning">Search</Button>
               </InputGroup>
             </div>
           </Container>
@@ -49,6 +49,6 @@ export default function Home() {
           &copy; {new Date().getFullYear()} All rights reserved
         </footer>
       </>
-    </>
+    </div>
   );
 }

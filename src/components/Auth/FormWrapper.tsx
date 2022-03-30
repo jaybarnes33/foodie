@@ -4,13 +4,21 @@ import React, { ReactNode } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import Image from "next/image";
 import styles from "./styles.module.scss";
-import { useRouter } from "next/router";
+import router, { useRouter } from "next/router";
 import Link from "next/link";
 const FormWrapper = ({ children }: { children: ReactNode }) => {
   const { pathname } = useRouter();
   return (
     <Container>
       <>
+        <Button
+          className="m-3"
+          variant="black"
+          style={{ fontSize: "2rem", position: "fixed", top: 0, left: 0 }}
+          onClick={() => router.back()}
+        >
+          &larr;
+        </Button>
         <Row className={styles.formWrapper}>
           <Col md={6} className="desktop-only px-5">
             <div className={styles.imgWrapper}>

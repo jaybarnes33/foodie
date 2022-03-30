@@ -1,60 +1,31 @@
-import Image from "next/image";
 import React from "react";
-import { Card, CardImg, Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import Carousel from "../Core/Carousel";
 
+import ProductCard from "../Core/ProductCard";
+
+export const featuredItems = [
+  {
+    id: 0,
+    name: "Hostel Crust",
+    image: "/images/landing/home.jpg",
+    rating: 5,
+  },
+  { id: 1, name: "Adisa Waakye", image: "/images/landing/bg.jpg", rating: 4.5 },
+  { id: 2, name: "Awala Waakye", image: "/images/landing/home.jpg", rating: 4 },
+  { id: 3, name: "Yam and Pork", image: "/images/landing/home.jpg", rating: 5 },
+];
 const FeaturedFoods = () => {
-  const featuredItems = [
-    {
-      name: "Hostel Crust",
-      image: "home.jpg",
-    },
-    {
-      name: "Adisa Waakye",
-      image: "bg.jpg",
-    },
-    {
-      name: "Awala Waakye",
-      image: "home.jpg",
-    },
-    {
-      name: "Yam and Pork",
-      image: "home.jpg",
-    },
-  ];
   return (
-    <section className="py-5">
+    <section className="py-5 ">
       <Container>
         <h2 className="bold">Available Sellers</h2>
 
-        <Row>
+        <Carousel>
           {featuredItems.map((item, key) => (
-            <Col xs={6} lg={3} key={`item-key`} className="mt-2">
-              <Card
-                style={{
-                  border: "none",
-                  boxShadow: "0 8.21687px 8.21687px rgba(0,0,0,.1)",
-                }}
-              >
-                <CardImg
-                  src={`/images/landing/${item.image}`}
-                  as={Image}
-                  width="100"
-                  height="120"
-                  quality={100}
-                  objectFit="cover"
-                  alt={item.name}
-                  loading="lazy"
-                />
-                <Card.Body>
-                  <small>
-                    <h6>{item.name}</h6>
-                    <span>0 reviews</span>
-                  </small>
-                </Card.Body>
-              </Card>
-            </Col>
+            <ProductCard item={item} key={`featured-${key}`} />
           ))}
-        </Row>
+        </Carousel>
       </Container>
     </section>
   );

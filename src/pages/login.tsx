@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { ChangeEvent, FormEvent, useState } from "react";
-import { Button, Col, Form, Row } from "react-bootstrap";
+import { Alert, Button, Col, Form, Row } from "react-bootstrap";
 import FormWrapper from "../components/Auth/FormWrapper";
 
 interface ILogin {
@@ -13,6 +13,7 @@ const Login = () => {
     password: "",
   });
 
+  const [error, setError] = useState("");
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setLoginData((prevState) => ({
@@ -30,12 +31,13 @@ const Login = () => {
         sessionStorage.setItem("token", data.refreshToken);
       }
     } catch (error) {
-      console.log(error);
+      setError(error.response.data.message);
     }
   };
   return (
     <FormWrapper>
       <Form onSubmit={handleSubmit}>
+        {error && <Alert variant="danger">{error}</Alert>}
         <Form.Group>
           <Form.Label>Email</Form.Label>
           <Form.Control
